@@ -1,5 +1,5 @@
 import React from "react";
-import { images } from "../../../../constants";
+import { motion } from "framer-motion";
 import {
   downFeatures,
   upSideFeatures,
@@ -23,7 +23,17 @@ const MainFeatures = () => {
           A Complete Solution for AI SaaS Startups
         </p>
       </div>
-      <div className="flex flex-col mt-10 gap-y-14 md:mt-0 md:gap-y-0 md:flex-row  relative">
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        transition={{ duration: 1, ease: "easeIn" }}
+        variants={{
+          visible: { opacity: 1, scale: 1 },
+          hidden: { opacity: 0, scale: 0 },
+        }}
+        className="flex flex-col mt-10 gap-y-14 md:mt-0 md:gap-y-0 md:flex-row  relative"
+      >
         {upSideFeatures.map((item, index) => (
           <MainFeaturesCard
             image={item.icon}
@@ -32,9 +42,23 @@ const MainFeatures = () => {
             key={index}
           />
         ))}
-      </div>
+      </motion.div>
 
-      <div className="flex flex-col gap-y-14 mt-10 md:mt-0 md:gap-y-0 md:flex-row  relative">
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        // animate={{ rotate: [0, 5, -5, 0] }}
+        transition={{
+          duration: 1,
+          ease: "easeIn",
+        }}
+        variants={{
+          visible: { opacity: 1, scale: 1 },
+          hidden: { opacity: 0, scale: 0 },
+        }}
+        className="flex flex-col gap-y-14 mt-10 md:mt-0 md:gap-y-0 md:flex-row  relative"
+      >
         {downFeatures.map((item, index) => (
           <MainFeaturesCard
             image={item.icon}
@@ -44,7 +68,7 @@ const MainFeatures = () => {
             classes="bg-[linear-gradient(360deg,_hsla(0,_0%,_100%,_0),_hsla(0,_0%,_100%,_.05))]"
           />
         ))}
-      </div>
+      </motion.div>
       <div class="bg-[linear-gradient(10deg,_hsla(0,_0%,_100%,_0),_hsla(0,_0%,_100%,_.12)_49.48%,_hsla(0,_0%,_100%,_0))] absolute left-0 top-[56%] md:top-[57.5%] xl:top-[58.8%] lg:top-[56.3%]  h-[1px] w-full translate-y-1/2 rotate-[-90] lg:block lg:-translate-x-[-31.50%] "></div>
     </div>
   );

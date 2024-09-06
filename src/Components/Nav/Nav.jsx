@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { images } from "../../constants";
 import { BsArrowRightShort } from "react-icons/bs";
+import { motion } from "framer-motion";
 
 const navItem = [
   { name: "Home", link: "#" },
@@ -42,9 +43,18 @@ const Nav = () => {
           scrolled ? "py-4" : "py-6"
         } `}
       >
-        <div>
+        <motion.div
+          initial={{ translateY: 0 }}
+          animate={{ translateY: [0, 3, -4, 0] }}
+          transition={{
+            duration: 10,
+            repeat: Infinity,
+            repeatDelay: 5,
+            repeatType: "reverse",
+          }}
+        >
           <img src={images.logo} alt="Ai Tool" />
-        </div>
+        </motion.div>
         <div>
           <ul className="flex gap-12 text-sm items-center align-middle justify-evenly">
             {navItem.map((item, index) => (

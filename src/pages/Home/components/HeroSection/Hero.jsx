@@ -1,5 +1,6 @@
 import React from "react";
 import { images } from "../../../../constants";
+import { motion, AnimatePresence } from "framer-motion";
 
 const Hero = () => {
   return (
@@ -22,9 +23,26 @@ const Hero = () => {
             Try Ai Examples
           </button>
         </div>
-        <div className="w-full mt-10 mb-32">
-          <img className="w-full md:w-[80%] m-auto" src={images.hero} alt="" />
-        </div>
+
+        <AnimatePresence>
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            transition={{ duration: 2, ease: "easeIn" }}
+            variants={{
+              visible: { opacity: 1, scale: 1 },
+              hidden: { opacity: 0, scale: 0 },
+            }}
+            className="w-full mt-10 mb-32 "
+          >
+            <img
+              className="w-full md:w-[80%] m-auto"
+              src={images.hero}
+              alt=""
+            />
+          </motion.div>
+        </AnimatePresence>
       </div>
       <div className="border-l border-r border-b border-[#918ea084] w-[94%] h-[1225px] absolute top-[-120%]  left-0 right-0 z-[-10] m-auto rounded-[100%]"></div>
       <div className="border-l border-r border-b border-[#918ea084] w-[82%] h-[1282px] absolute top-[-150%] left-0 right-0 z-[-10] m-auto rounded-[100%]"></div>
