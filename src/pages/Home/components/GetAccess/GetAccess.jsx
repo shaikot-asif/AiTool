@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import AnimationSection from "../../../../Components/AnimationSection";
-import { images } from "../../../../constants";
-import Animation from "../../../../shared/ui/Animation";
+
 import TextButton from "../../../../shared/ui/TextButton";
 import Pricing from "./Pricing/Pricing";
 

@@ -7,7 +7,6 @@ const navItem = [
   { name: "Home", link: "#" },
   { name: "About", link: "#" },
   { name: "Blog", link: "#" },
-  { name: "Docs", link: "#" },
 ];
 
 const Nav = () => {
@@ -29,17 +28,15 @@ const Nav = () => {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  });
+  }, []);
   return (
     <div
       className={`${
-        scrolled
-          ? "bg-black border-b border-pColor backdrop-blur-sm"
-          : "bg-transparent"
-      } z-[9999] fixed top-0 left-0 right-0 opacity-90`}
+        scrolled ? "bg-black border-b border-[#ffffff3a] " : "bg-transparent"
+      } z-[9999] fixed top-0 left-0 right-0 opacity-80`}
     >
       <div
-        className={` container mx-auto px-[50.5px]  flex flex-row justify-between align-middle items-center ${
+        className={` container mx-auto px-[50.5px]   flex flex-row justify-between align-middle items-center ${
           scrolled ? "py-4" : "py-6"
         } `}
       >

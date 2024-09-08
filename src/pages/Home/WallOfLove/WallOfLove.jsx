@@ -21,7 +21,7 @@ const WallOfLove = () => {
   };
 
   return (
-    <div className="container mb-[200px] overflow-hidden m-auto px-[20px] md:px-[56.9px] relative ">
+    <div className="container mb-[200px] overflow-hidden m-auto px-[20px] md:px-[50.5px] relative ">
       <div className="text-center w-full mb-10 flex flex-col gap-4">
         <TextButton text={"Wall of love"} classes="w-[136px]" />
         <h2 className="font-extrabold text-[28px] md:text-[48px] leading-[38px] md:leading-[58px] text-white ">
