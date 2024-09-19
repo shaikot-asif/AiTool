@@ -5,7 +5,7 @@ import TextButton from "../../../../shared/ui/TextButton";
 const Blog = () => {
   return (
     <div className="mb-[200px]">
-      <div className="text-center w-full mb-10 flex flex-col gap-4">
+      <div className=" container m-auto px-[20px] md:px-[50.5px] text-center w-full mb-10 flex flex-col gap-4">
         <TextButton text={"Read Our Latest Blog"} classes="w-[200px]" />
         <h2 className="font-extrabold text-[28px] md:text-[48px] leading-[38px] md:leading-[58px] text-white ">
           Latest Blog and News
@@ -27,7 +27,7 @@ const Blog = () => {
                 text={item.text}
                 title={item.title}
                 key={index}
-                classes={"xl:w-[31%] lg:w-[30%] md:w-[29%] "}
+                classes={" "}
               />
             )
         )}

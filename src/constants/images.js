@@ -18,6 +18,7 @@ import blur23 from "../assets/blur-20.svg";
 import blur24 from "../assets/blur-20.svg";
 
 import bigIcon from "../assets/big-icon.svg";
+import about from "../assets/about.svg";
 
 import asif from "../assets/asif.jpg";
 
@@ -41,6 +42,7 @@ const images = {
   blur23,
   blur24,
   bigIcon,
+  about,
   asif,
 };
 export default images;

@@ -8,8 +8,6 @@ const WallOfLove = () => {
   const [isShow, setIsShow] = useState(false);
   const [indexVal, setIndexVal] = useState(8);
 
-  console.log("isShow: ", isShow, "indesVal:", indexVal);
-
   const handleClickClose = () => {
     setIndexVal(8);
     setIsShow(false);

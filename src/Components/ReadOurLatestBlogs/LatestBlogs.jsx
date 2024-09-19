@@ -4,7 +4,7 @@ import { CiCalendarDate } from "react-icons/ci";
 
 const LatestBlogs = ({ image, tag, title, text, admin, date, classes }) => {
   return (
-    <div className={`${classes}`}>
+    <div className={`xl:w-[31%] lg:w-[30%] md:w-[29%]`}>
       <div className=" [&_img]:hover:scale-125 ">
         <div className="overflow-hidden w-full h-[150px] lg:h-[200px] rounded-xl ">
           <img
